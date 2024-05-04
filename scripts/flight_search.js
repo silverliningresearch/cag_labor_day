@@ -37,15 +37,19 @@ function flight_in_list_found(list, item) {
   
   if (item) {
     if (item !== "") {
-      for (i = 0; i < list.length; i++) {
-        if (list[i].Show.toLowerCase() === item) {
-          $('.rt-btn.rt-btn-next').show(); 
-          return true;
-        }
-      }
+      // for (i = 0; i < list.length; i++) {
+      //   if (list[i].Show.toLowerCase() === item) 
+      //   {          
+      //     $('.rt-btn.rt-btn-next').show(); 
+      //     return true;
+      //   }
+      // }
+    $('.rt-btn.rt-btn-next').show(); 
+    return true;
+
     }
   }
-  $('.rt-btn.rt-btn-next').hide(); 
+  //$('.rt-btn.rt-btn-next').hide(); 
   return false;
 }
 
@@ -139,7 +143,7 @@ function update_drop_box_list() {
       }
     }
     
-    if (count > 30) {
+    if (count > 10) {
       break;
     }
   }
