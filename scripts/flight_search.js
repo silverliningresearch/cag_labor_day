@@ -164,6 +164,8 @@ function select_flight() {
   var found = false;
  //$('.rt-btn.rt-btn-next').hide(); 
 
+  api.fn.answers({Flight: selectedFlight});
+
   for (i = 0; i < flightShortList.length; i++) {
     var currentFlight = flightShortList[i];
     if (currentFlight.Show == selectedFlight) { 
